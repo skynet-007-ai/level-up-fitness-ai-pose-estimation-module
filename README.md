@@ -138,5 +138,24 @@ Possible improvements to the system:
 AI/ML Lead - Level-Up Fitness Capstone Project
 Indian Institute of Technology Patna
 
+---
+
+## 🤝 Contributing
+
+This project is currently under active development.
+
+Contributions, suggestions, and improvements are welcome. If you would like to contribute:
+
+1. Fork the repository
+2. Create a new branch for your feature or fix
+3. Submit a pull request with a clear description of your changes
+
+Feel free to open an **issue** if you encounter bugs or have ideas for improvements.
+
+---
+
+## 📌 Project Status
+
+This project is part of the **LevelUp Fitness Capstone Project** and is currently being improved with additional features and exercise detection capabilities.
 
 This repository contains the AI module contribution to the LevelUp Fitness project. The full system includes additional frontend and backend modules developed by the team.
