@@ -81,8 +81,8 @@ AI_Module
 Clone the repository:
 
 ```bash
-git clone https://github.com/skynet-007-ai/Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant.git
-cd Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant
+git clone https://github.com/skynet-007-ai/level-up-fitness-ai-pose-estimation-module.git
+cd level-up-fitness-ai-pose-estimation-module
 
 ```
 
