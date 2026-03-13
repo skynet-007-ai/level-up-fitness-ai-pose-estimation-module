@@ -1,85 +1,142 @@
 # 🤖 LevelUp Fitness – AI Pose Estimation Module
 
-This repository contains the AI Pose Estimation script used in the **LevelUp Fitness Web Application** – a capstone project aimed at bringing personalized, AI-powered fitness training to users through posture correction and exercise feedback.
+This repository contains the **AI module** for the *LevelUp Fitness* capstone project.  
+The system uses **computer vision and pose estimation** to analyze exercise posture, detect repetitions, and provide feedback on exercise form.
 
-> 🧠 Built using Python, MediaPipe, and OpenCV for real-time exercise form detection and rep counting.
-
----
-
-## 📌 Project Context
-
-This module is part of the larger **LevelUp Fitness** project, where team members worked on:
-- **Frontend** – User interface for workout sessions and profile tracking.
-- **Backend** – Authentication, workout data management, diet plans.
-- **AI Module (this repo)** – Real-time posture analysis and form feedback using pose estimation.
+The module currently supports **push-up and squat detection** using joint angle analysis.
 
 ---
 
-## 📽️ Features of This Module
+## 🧠 Overview
 
-✅ Real-time pose estimation using webcam or uploaded videos  
-✅ Supports **Push-ups** and **Squats**  
-✅ Auto-detects which exercise is being performed  
-✅ Gives feedback on correct or incorrect posture  
-✅ Reference model comparison (based on average Indian body pose structure)  
-✅ Rep counter integrated for performance tracking  
+The system uses **MediaPipe Pose Estimation** to track human body landmarks and calculate joint angles.  
+These angles are used to:
+
+- Detect the type of exercise being performed
+- Count repetitions
+- Provide posture feedback based on reference joint angle data
+
+---
+
+## 📽️ Demo
+
+The screenshots below show the system detecting exercise posture,
+counting repetitions, and displaying feedback in real time.
+
+### Push-up Detection
+
+Example output showing push-up detection and rep counting.
+
+![Push-up Detection](demo/output_example_pushups.png)
+
+### Squat Detection
+
+Example output showing squat detection and posture analysis.
+
+![Squat Detection](demo/output_example_squats.png)
+
+---
+
+## ✨ Features
+
+- Real-time pose estimation using MediaPipe
+- Automatic exercise detection (Push-ups / Squats)
+- Rep counting using joint angle thresholds
+- Posture feedback based on reference joint angles
+- Supports both webcam input and pre-recorded video
+
+---
+
+## 📂 Project Structure
+
+```
+AI_Module
+│
+├── src
+│   ├── exercise_pose_feedback.py
+│   ├── pose_estimation_demo.py
+│   ├── pose_landmark_extractor.py
+│   └── generate_reference_dataset.py
+│
+├── demo
+│   ├── pushup_demo.mp4
+│   ├── squats_demo.mp4
+│   ├── output_example_pushups.png
+│   └── output_example_squats.png
+│
+├── reference_data
+│   └── reference_pushup_data.json
+│
+├── dataset_sample
+│
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/skynet-007-ai/Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant.git
+cd Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant
+
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+
+```
+---
+
+## ▶️ Running the Project
+
+
+Run the main pose detection and feedback script:
+
+```bash
+python src/exercise_pose_feedback.py
+
+```
+Press **q** to exit the program.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component | Tools/Libs Used |
-|----------|------------------|
-| Language | Python |
-| Pose Estimation | MediaPipe |
-| Video Processing | OpenCV |
-| Math & Logic | NumPy, math module |
-| Reference Comparison | Custom Joint Angles & Positioning |
-| UI Integration | Flask API (if connected with web app) |
+| Component            | Technology |
+| -------------------- | ---------- |
+| Language             | Python     |
+| Pose Estimation      | MediaPipe  |
+| Video Processing     | OpenCV     |
+| Numerical Processing | NumPy      |
 
 ---
 
-## Team Members and Their Roles
+## 🚀 Future Improvements
 
-### 1. Harsh Kumar (ME, 24A12RES271) – AI/ML Lead & Project Coordinator  
-**Responsibilities:**  
-- Led overall planning, architecture, and team coordination  
-- Developed AI-based posture correction using MediaPipe and OpenCV  
-- Designed logic for personalized workout recommendations  
-- Integrated AI modules with frontend/backend flow  
+Possible improvements to the system:
 
-**Skills Applied/Learned:**  
-- Machine Learning, Computer Vision  
-- YOLOv8n (Ultralytics), OpenCV, MediaPipe  
-- Object Detection Model Training and Custom Dataset Handling  
-- AI Workflow Planning and Real-time Integration  
+1. Support more exercises (lunges, planks, pull-ups)
+
+2. Improve posture classification accuracy
+
+3. Add real-time voice feedback
+
+4. Deploy as a web or mobile fitness assistant
 
 ---
 
-### 2. Hanshraj Kumar (24A12RES260) – Frontend Developer & UI Designer  
-**Responsibilities:**  
-- Developed frontend using HTML, CSS, and JavaScript  
-- Built secure login interface for user authentication  
-- Designed UI sections: Yoga, Meditation, Bodyweight Training, Diet  
-- Created responsive navbar and “To-Do List” feature  
-- Developed a static “Contact Us” section with developer info  
+## 👨‍💻 Author
 
-**Skills Applied/Learned:**  
-- UI design, responsive layout (HTML/CSS)  
-- Modular component structuring  
-- Web navigation and content flow  
+**Harsh Kumar**
+AI/ML Lead - Level-Up Fitness Capstone Project
+Indian Institute of Technology Patna
 
----
 
-### 3. Harsh Kumar (24A12RES268) – Backend Developer & UX Designer  
-**Responsibilities:**  
-- Built backend using Node.js and Express.js  
-- Implemented JWT-based login and registration  
-- Managed MongoDB Atlas for storing user and profile data  
-- Developed logic for diet plan generation and PDF download  
-- Enabled secure logout, YouTube video embedding, and API routing  
-
-**Skills Applied/Learned:**  
-- Node.js, Express.js, MongoDB  
-- JWT authentication and REST API  
-- Secure backend logic and database handling  
+This repository contains the AI module contribution to the LevelUp Fitness project. The full system includes additional frontend and backend modules developed by the team.

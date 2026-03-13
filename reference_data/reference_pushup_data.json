@@ -1,0 +1,30 @@
+[
+    {
+        "rep": 1,
+        "min_angle": 63.86,
+        "max_angle": 168.76,
+        "avg_angle": 97.91,
+        "samples": 58
+    },
+    {
+        "rep": 2,
+        "min_angle": 53.07,
+        "max_angle": 179.96,
+        "avg_angle": 115.86,
+        "samples": 86
+    },
+    {
+        "rep": 3,
+        "min_angle": 62.83,
+        "max_angle": 178.4,
+        "avg_angle": 120.68,
+        "samples": 101
+    },
+    {
+        "rep": 4,
+        "min_angle": 62.01,
+        "max_angle": 179.83,
+        "avg_angle": 121.26,
+        "samples": 89
+    }
+]
